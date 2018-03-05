@@ -1,0 +1,7 @@
+<h1>List of flats</h1>
+<ul>
+  <% @flats.each_with_index do |flat, index| %>
+    <li><%= flat["name"]%> : <%= flat["price"]%>€</li>
+    <%= link_to "More infos", flat_path(index) %>
+  <% end %>
+</ul>
